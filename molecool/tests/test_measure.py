@@ -3,8 +3,11 @@ Tests for the measure module
 """
 
 # imports
-import molecool
 import numpy as np
+import pytest
+
+import molecool
+
 
 def test_calculate_distance():
 
@@ -26,4 +29,4 @@ def test_calculate_angle():
 
     calculated_angle = molecool.calculate_angle(p1,p2,p3,degrees=True)
 
-    assert expected_angle == calculated_angle
+    assert pytest.approx(expected_angle) == calculated_angle
