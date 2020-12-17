@@ -20,48 +20,48 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
     return bonds
 
 def calculate_molecular_mass(symbols):
-   """Calculate the mass of a molecule.
+    """Calculate the mass of a molecule.
 
-   Parameters
-   ----------
-   symbols : list
-       A list of elements.
+    Parameters
+    ----------
+    symbols : list
+        A list of elements.
 
-   Returns
-   -------
-   mass : float
-       The mass of the molecule
-   """
-   mol_mass = 0.0
-   for symbol in symbols:
-       mol_mass += atomic_weights[symbol]
+    Returns
+    -------
+    mass : float
+        The mass of the molecule
+    """
+    mol_mass = 0.0
+    for symbol in symbols:
+        mol_mass += atomic_weights[symbol]
 
-   return mol_mass
+    return mol_mass
 
 
 def calculate_center_of_mass(symbols, coordinates):
-   """Calculate the center of mass of a molecule.
+    """Calculate the center of mass of a molecule.
 
-   The center of mass is weighted by each atom's weight.
+    The center of mass is weighted by each atom's weight.
 
-   Parameters
-   ----------
-   symbols : list
+    Parameters
+    ----------
+    symbols : list
        A list of elements for the molecule
-   coordinates : np.ndarray
+    coordinates : np.ndarray
        The coordinates of the molecule.
 
-   Returns
-   -------
-   center_of_mass: np.ndarray
+    Returns
+    -------
+    center_of_mass: np.ndarray
        The center of mass of the molecule.
 
-   Notes
-   -----
-   The center of mass is calculated with the formula
+    Notes
+    -----
+    The center of mass is calculated with the formula
 
-   .. math:: \\vec{R}=\\frac{1}{M} \\sum_{i=1}^{n} m_{i}\\vec{r_{}i}
+    .. math:: \\vec{R}=\\frac{1}{M} \\sum_{i=1}^{n} m_{i}\\vec{r_{}i}
 
-   """
+    """
 
-   return np.array([])
+    return np.array([])
